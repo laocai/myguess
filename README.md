@@ -271,7 +271,7 @@
 ###### 请求参数
 |参数|必选|类型|说明|
 |:-----  |:-------|:-----|-----                               |
-|id    |是    |uint64   |竞猜id |
+|gid    |是    |uint64   |竞猜id |
 
 ###### 返回字段
 |返回字段|字段类型|说明                              |
@@ -280,7 +280,7 @@
 |data  |string | 竞猜内容详细信息                      |
 
 ###### 接口示例
-> curl http://localhost/guess/getlist/byhot?getstatus=1&pagenum=0&pagecount=10
+> curl http://localhost/guess/desc?gid=12
 返回：
 ``` javascript
 {
