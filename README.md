@@ -3,12 +3,13 @@
   /**
    * 创建一个竞猜
    * @param assetId 下注的资产id
-   * @param chip 每个用户下注时的筹码个数
+   * @param minChip 每个用户下注时的最小筹码个数
+   * @param maxChip 每个用户下注时的最大筹码个数
    * @param optCount 竞猜选项个数，大于2小于9
    * @param endGuess 下注截止时间，格林威治时间1970年01月01日00时00分00秒起的总秒数
    * @return 返回创建好的竞猜id
    */
-    function newguess(uint256 assetId, uint256 chip, uint optCount, uint64 endGuess) public returns (uint64)
+    function newguess(uint256 assetId, uint256 minChip, uint256 maxChip, uint optCount, uint64 endGuess) public returns (uint64)
 ```
 
 **abi接口  用户下注**
@@ -51,7 +52,8 @@
 |:-----  |:-------|:-----|-----                               |
 |gid    |是    |uint64   |竞猜id |
 |assetid    |是    |uint64   |资产id |
-|chip    |是    |uint64   |本竞猜每个用户的下注筹码量 |
+|minChip    |是    |uint64   |本竞猜每个用户的下注最小筹个数 |
+|maxChip    |是    |uint64   |本竞猜每个用户的下注最大筹个数 |
 |endguess    |是    |uint64   |下注截止时间，格林威治时间1970年01月01日00时00分00秒起的总秒数 |
 |endtime    |是    |uint64   |开奖时间 |
 |gclass    |是    |uint64   |竞猜系列分类 |
