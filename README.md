@@ -258,7 +258,7 @@
 > 按下注金额或人数获取状态未结束的列表，默认按结束时间倒序
 
 ###### URL
-> [http://localhost/guess/getlist/byhot](http://)
+> [http://localhost/guess/getlist/bystatus](http://)
 
 ###### 支持格式
 > JSON
