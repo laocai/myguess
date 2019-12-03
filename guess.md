@@ -37,6 +37,7 @@
 
 ###### 接口示例
 > curl http://107.191.49.150:8080/guess/save -d '{"gid":1,"assetid":0,"minchip":1,"maxchip":10,"endguess":1576206359,"endtime":1576292759,"gclass":"足球赛","title":"世界杯预先赛竞猜","sketch":"中国 vs 叙利亚","desc":"世界杯预选赛中国vs叙利亚","opts":[{"opt":0,"desc":"赢"},{"opt":1,"desc":"平"},{"opt":2,"desc":"输"}],"creator":"laocai"}'
+
 > curl http://localhost/guess/save -d '{"gid":2,"assetid":0,"minchip":2,"maxchip":10,"endguess":1576206659,"endtime":1576292859,"gclass":"数字币价格","title":"每天BTC预测","sketch":"BTC价格之神","desc":"每天BTC价格涨跌预测","opts":[{"opt":0,"desc":"涨"},{"opt":1,"desc":"跌"},{"opt":2,"desc":"不波动"}],"creator":"laoluo"}'
 返回：
 ``` javascript
