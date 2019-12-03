@@ -40,8 +40,8 @@
 返回：
 ``` javascript
 {
-    "status": 0,
-    "data": {}
+  "status":0,
+  "msg":""
 }
 ```
 
