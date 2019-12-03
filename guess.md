@@ -297,3 +297,140 @@
     "data": {...}
 }
 ```
+
+**http接口9 添加竞猜类别**
+###### 接口功能
+> 根据竞猜id获取详细此竞猜的信息
+
+###### URL
+> [http://localhost/guess/guessclass/add](http://)
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> GET
+
+###### 请求参数
+|参数|必选|类型|说明|
+|:-----  |:-------|:-----|-----                               |
+|gclass    |是    |string   |类别名称 |
+|weight    |是    |int   |权重 |
+
+###### 返回字段
+|返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg  |string | 竞猜内容详细信息                      |
+
+###### 接口示例
+> curl http://localhost/guess/guessclass/add?gclass=足球赛&weight=1
+返回：
+``` javascript
+{
+    "status": 0,
+    "msg": ""
+}
+```
+
+**http接口10 删除竞猜类别**
+###### 接口功能
+> 根据竞猜id获取详细此竞猜的信息
+
+###### URL
+> [http://localhost/guess/guessclass/del](http://)
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> GET
+
+###### 请求参数
+|参数|必选|类型|说明|
+|:-----  |:-------|:-----|-----                               |
+|gclass    |是    |string   |类别名称 |
+
+###### 返回字段
+|返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg  |string | 竞猜内容详细信息                      |
+
+###### 接口示例
+> curl http://localhost/guess/guessclass/del?gclass=足球赛
+返回：
+``` javascript
+{
+    "status": 0,
+    "msg": ""
+}
+```
+
+**http接口11 修改竞猜权重**
+###### 接口功能
+> 根据竞猜id获取详细此竞猜的信息
+
+###### URL
+> [http://localhost/guess/guessclass/set](http://)
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> GET
+
+###### 请求参数
+|参数|必选|类型|说明|
+|:-----  |:-------|:-----|-----                               |
+|gclass    |是    |string   |类别名称 |
+|weight    |是    |int   |权重 |
+
+###### 返回字段
+|返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg  |string | 竞猜内容详细信息                      |
+
+###### 接口示例
+> curl http://localhost/guess/guessclass/set?gclass=足球赛&weight=3
+返回：
+``` javascript
+{
+    "status": 0,
+    "msg": ""
+}
+```
+
+**http接口12 拉取竞猜类别**
+###### 接口功能
+> 根据竞猜id获取详细此竞猜的信息
+
+###### URL
+> [http://localhost/guess/guessclass/get](http://)
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> GET
+
+###### 请求参数
+无
+
+###### 返回字段
+|返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg  |string | 竞猜内容详细信息                      |
+
+###### 接口示例
+> curl http://localhost/guess/guessclass/get
+返回：
+``` javascript
+{
+  "status":0,
+  "msg":"",
+  "data":[{"gclass":"数字币价格","weight":1},{"gclass":"足球赛","weight":3}]
+}
+```
