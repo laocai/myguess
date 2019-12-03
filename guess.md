@@ -1,70 +1,3 @@
-**abi接口  管理员创建竞猜**
-``` javascript
-  /**
-   * 创建一个竞猜
-   * @param assetId 下注的资产id
-   * @param minChip 每个用户下注时的最小筹码个数
-   * @param maxChip 每个用户下注时的最大筹码个数
-   * @param optCount 竞猜选项个数，大于2小于9
-   * @param endGuess 下注截止时间，格林威治时间1970年01月01日00时00分00秒起的总秒数
-   * @return 返回创建好的竞猜id
-   */
-    function newguess(uint256 assetId, uint256 minChip, uint256 maxChip, uint optCount, uint256 endGuess) public returns (uint64 gid)
-```
-
-**abi接口  用户下注**
-``` javascript
-  /**
-   * 下注竞猜，用户调用此接口并转账资产给合约，资产类型和数量为newguess创建时指定
-   * @param gid newguess创建竞猜时返回的id
-   * @param opt 下注第几个选项，选项序号从0开始
-   * @return 无
-   */
-    function guess(uint64 gid, uint opt) payable
-```
-
-**abi接口  管理员开奖**
-``` javascript
-  /**
-   * 开奖
-   * @param gid newguess创建竞猜时返回的id
-   * @param opt 中奖选项，选项序号从0开始
-   * @return 无
-   */
-    function endguess(uint64 gid, uint opt) public
-```
-
-**abi接口  管理员发放奖励**
-``` javascript
-  /**
-   * 发放奖励。因怕引起失败一次性转账5个账户，发奖后台程序独立运行。
-   * @param gid newguess创建竞猜时返回的id
-   * @param winer 获奖者，一次最多处理5个获奖者
-   * @return 无
-   */
-    function reward(uint64 gid, address[5] winer) public
-```
-
-**abi接口  失败者获得矿**
-``` javascript
-  /**
-   * 给失败者发矿。因怕引起失败一次性转账5个账户，发矿由后台程序独立运行。
-   * @param gid newguess创建竞猜时返回的id
-   * @param loser 获奖者，一次最多处理5个获奖者
-   * @return 无
-   */
-    function mining(uint64 gid, uint opt, address[5] loser) public
-```
-
-**abi接口  设置管理员**
-``` javascript
-  /**
-   * 设置合约管理员，目前只支持一个管理员。
-   * @param manager 管理员
-   * @return 无
-   */
-    function setmgr(address manager)
-```
 
 **http接口 保存新创建的竞猜**
 ###### 接口功能
@@ -84,11 +17,11 @@
 |:-----  |:-------|:-----|-----                               |
 |gid    |是    |uint64   |竞猜id |
 |assetid    |是    |uint64   |资产id |
-|minChip    |是    |uint64   |本竞猜每个用户的下注最小筹个数 |
-|maxChip    |是    |uint64   |本竞猜每个用户的下注最大筹个数 |
+|minchip    |是    |uint64   |本竞猜每个用户的下注最小筹个数 |
+|maxchip    |是    |uint64   |本竞猜每个用户的下注最大筹个数 |
 |endguess    |是    |uint64   |下注截止时间，格林威治时间1970年01月01日00时00分00秒起的总秒数 |
 |endtime    |是    |uint64   |开奖时间 |
-|gclass    |是    |uint64   |竞猜系列分类 |
+|gclass    |是    |string   |竞猜系列分类 |
 |title    |是    |string   |竞猜标题 |
 |sketch    |是    |string   |竞猜简述 |
 |desc    |是    |string   |竞猜内容 |
@@ -142,8 +75,8 @@
 返回：
 ``` javascript
 {
-    "status": 0,
-    "data": {}
+  "status":0,
+  "msg":""
 }
 ```
 
@@ -173,12 +106,12 @@
 |data  |string | 正确为空                      |
 
 ###### 接口示例
-> curl http://localhost/guess/endguess?gid=12&opt=2
+> curl http://localhost/guess/endguess?gid=12&winopt=2
 返回：
 ``` javascript
 {
-    "status": 0,
-    "data": {}
+  "status":0,
+  "msg":""
 }
 ```
 
