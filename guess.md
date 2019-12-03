@@ -138,7 +138,7 @@
 |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|data  |string | 正确为空                      |
+|msg  |string | 正确为空                      |
 
 ###### 接口示例
 > curl http://localhost/guess/endguess?gid=12&winopt=2
