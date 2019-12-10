@@ -18,9 +18,10 @@
    * 下注竞猜，用户调用此接口并转账资产给合约，资产类型和数量为newguess创建时指定
    * @param gid newguess创建竞猜时返回的id
    * @param opt 下注第几个选项，选项序号从0开始
+   * @param partner 分成合作者
    * @return 无
    */
-    function guess(uint64 gid, uint opt) payable
+    function guess(uint64 gid, uint opt, address partner) payable
 ```
 
 **abi接口  管理员开奖**
@@ -55,6 +56,29 @@
    * @return 无
    */
     function mining(uint64 gid, uint opt, address[5] loser) public
+```
+
+**abi接口  给合作者分发利润**
+``` javascript
+/**
+   * 给合作者分发利润。
+   * @param gid newguess创建竞猜时返回的id
+   * @param partner 合作者
+   * @param amount 分发金额
+   * @return 无
+   */
+    function dprofits(uint64 gid, address partner, uint256 amount) public
+```
+
+**abi接口  设置合作者**
+``` javascript
+  /**
+   * 设置合作者信息。
+   * @param partner 合作者
+   * @param value 合作者信息，0 无效；大于0有为效合作者
+   * @return 无
+   */
+    function setpartner(address partner, uint value)
 ```
 
 **abi接口  设置管理员**
