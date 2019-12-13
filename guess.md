@@ -291,13 +291,26 @@
 |msg  |string |                       |
 |data  |string | 竞猜内容详细信息                      |
 
-###### 返回字段chips，chips每条记录为每个选项下单总额度
+###### 返回字段chips，chips每条记录为每个选项下注总额度
 |字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |gid   |uint64    |   |
 |opt  |int |    gid下的选项                   |
-|optsum  |string | 本选项的下单总额度                      |
-|gsum  |string | 本gid下的下单总金额，多处冗余。也是info中的chipsum                      |
+|optsum  |string | 本选项的下注总额度                      |
+|gsum  |string | 本gid下的下注总金额，多处冗余。也是info中的chipsum                      |
+|updatetxid  |string | 最后更新本记录optsum的交易hash                      |
+
+###### 返回字段details，details每条记录为每个用户的下注详情
+|字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|gid   |uint64    |   |
+|opt  |int |    下注的选项                   |
+|chip  |string | 下注金额                      |
+|ftaccount  |string | 下注用户                      |
+|irreversible  |int | 区块是否不可逆，1：确认中；2：不可逆                      |
+|partner  |string | 用户下注页面所属的合作商                      |
+|txid  |string | 用户下注链上的交易hash                      |
+###### 返回字段detailssum，翻页查询时，用于计算总页数
 
 ###### 接口示例
 > curl http://localhost/guess/desc?gid=6&pagenum=0&pagecount=10
