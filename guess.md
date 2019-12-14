@@ -298,6 +298,7 @@
 |opt  |int |    gid下的选项                   |
 |optsum  |string | 本选项的下注总额度                      |
 |gsum  |string | 本gid下的下注总金额，多处冗余。也是info中的chipsum                      |
+|optparticipants  |int |    gid下的opt选项参与人总数                   |
 |updatetxid  |string | 最后更新本记录optsum的交易hash                      |
 
 ###### 返回字段details，details每条记录为每个用户的下注详情
@@ -322,7 +323,7 @@
   "data":
     {
       "info":{"gid":6,"assetid":0,"minchip":"1000000000000000000","maxchip":"2000000000000000000","endguess":1576206359,"endtime":1576292759,"gclass":"足球赛","title":"世界杯预先赛竞猜","sketch":"中国 vs 叙利亚","desc":"世界杯预选赛中国vs叙利亚","opts":[{"opt":0,"desc":"赢"},{"opt":1,"desc":"平"},{"opt":2,"desc":"输"}],"winopt":999,"status":1,"chipsum":"5000000000000000000","participants":0,"creator":"laocai","createtime":1576130952,"txid":"0x555b23b1b30a06e854ef5c0f1d366dd3f552d36149970cfe44d6f2a9ccb7b06d"},
-      "chips":[{"gid":6,"opt":0,"optsum":"3000000000000000000","gsum":"5000000000000000000","updatetxid":"0x8196d4c30560f613b2aa62e4ef90a5245685589d5bfa5f810d2d8deb8a46b912"},{"gid":6,"opt":1,"optsum":"1000000000000000000","gsum":"5000000000000000000","updatetxid":"0x12eec943c5ae14f6d2ecd10f5ba981fdc434658307dccf57792ea8ccd990c62e"},{"gid":6,"opt":2,"optsum":"1000000000000000000","gsum":"5000000000000000000","updatetxid":"0xe31c2b86b2fe2bc106b0c1ec16a97597ef0a8744628229d36dac72bae1248d8c"}],
+      "chips":[{"gid":6,"opt":0,"optsum":"3000000000000000000","gsum":"2016320000100000000100","optparticipants":0,"updatetxid":"0x8196d4c30560f613b2aa62e4ef90a5245685589d5bfa5f810d2d8deb8a46b912"},{"gid":6,"opt":1,"optsum":"1000000000000000000","gsum":"2016320000100000000100","optparticipants":0,"updatetxid":"0x12eec943c5ae14f6d2ecd10f5ba981fdc434658307dccf57792ea8ccd990c62e"},{"gid":6,"opt":2,"optsum":"1000000000000000000","gsum":"2016320000100000000100","optparticipants":0,"updatetxid":"0xe31c2b86b2fe2bc106b0c1ec16a97597ef0a8744628229d36dac72bae1248d8c"}],
       "details":[{"gid":6,"opt":0,"chip":"1000000000000000000","ftaccount":"mymyliulaocai","irreversible":1,"partner":"liulaocai168","txid":"0x176128b966fe102075b99186af3be169963d8c3297eb30bf84682a72c9ca056f"},{"gid":6,"opt":0,"chip":"2000000000000000000","ftaccount":"liulaocai129","irreversible":1,"partner":"liulaocai168","txid":"0x8196d4c30560f613b2aa62e4ef90a5245685589d5bfa5f810d2d8deb8a46b912"},{"gid":6,"opt":1,"chip":"1000000000000000000","ftaccount":"x3c4f6667185","irreversible":1,"partner":"xaf5c812119e","txid":"0x12eec943c5ae14f6d2ecd10f5ba981fdc434658307dccf57792ea8ccd990c62e"},{"gid":6,"opt":2,"chip":"1000000000000000000","ftaccount":"bb4333c6dc46","irreversible":1,"partner":"xaf5c812119e","txid":"0xe31c2b86b2fe2bc106b0c1ec16a97597ef0a8744628229d36dac72bae1248d8c"}],
       "detailssum":4
     }
