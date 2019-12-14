@@ -21,3 +21,9 @@ curl http://107.191.49.150:8080/announcement/set -d '{"aid":"e3262cd7-1e22-11ea-
 curl "http://107.191.49.150:8080/announcement/get?pagenum=0&pagecount=10"
 返回：{"status":0,"msg":"","data":{"sum":1,"infos":[{"aid":"7cdf98bf-1e23-11ea-87e0-5600026eb468","title":"公告标题set","content":"公告内容set","status":0}]}}
 ```
+
+**根据id拉取--HTTP GET**
+``` javascript
+curl http://107.191.49.150:8080/announcement/getbyaid?aid="7cdf98bf-1e23-11ea-87e0-5600026eb468"
+返回：{"status":0,"msg":"","data":{"aid":"7cdf98bf-1e23-11ea-87e0-5600026eb468","title":"公告标题set","content":"公告内容set","status":0}}
+```
