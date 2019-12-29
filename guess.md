@@ -469,10 +469,10 @@
 
 **http其它接口**
 ``` javascript
-http://localhost/guess/detail/bygidaccount?gid=1&ftaccount=imconfig0001
-http://localhost/guess/detail/byaccount?ftaccount=imconfig0001&pagenum=0&pagecount=10
-http://localhost/guess/get4reward?ftaccount=imconfig0001&pagenum=0&pagecount=10
-curl http://localhost/usersys/login -d '{"ftaccount":"liulaocai168", "passwd":"mypasswd"}'
-curl http://localhost/usersys/loginreg -d '{"ftaccount":"liulaocai168", "passwd":"mypass"}'
+http://localhost/guess/detail/bygidaccount?gid=1&ftaccount=xxxxx
+http://localhost/guess/detail/byaccount?ftaccount=xxxxxx&pagenum=0&pagecount=10
+http://localhost/guess/get4reward?ftaccount=xxxxx&pagenum=0&pagecount=10
+curl http://localhost/usersys/login -d '{"ftaccount":"xxxxx", "passwd":"mypasswd"}'
+curl http://localhost/usersys/loginreg -d '{"ftaccount":"xxxxx", "passwd":"mypass"}'
 curl http://localhost/usersys/sessionshift
 ```
