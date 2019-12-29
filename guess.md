@@ -467,6 +467,14 @@
 }
 ```
 
+**http合作商接口**
+``` javascript
+curl http://localhost/usersys/partner/add -d '{"ftaccount":"xxxxx", "uname":"老蔡", "phone":"123456789", "wechat":"ciacai2016j", "email":"123@gmail.com"}'
+curl http://localhost/usersys/partner/set -d '{"ftaccount":"xxxxx", "uname":"老蔡", "phone":"1234567890", "wechat":"ciacai2016j", "email":"123456@gmail.com"}'
+curl "http://localhost/usersys/partner/get?pagenum=0&pagecount=5"
+curl http://localhost/usersys/partner/del?ftaccount=xxxxx
+```
+
 **http其它接口**
 ``` javascript
 http://localhost/guess/detail/bygidaccount?gid=1&ftaccount=xxxxx
