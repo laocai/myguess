@@ -466,3 +466,13 @@
   "data":[{"gclass":"数字币价格","weight":1},{"gclass":"足球赛","weight":3}]
 }
 ```
+
+**http其它接口**
+``` javascript
+http://localhost/guess/detail/bygidaccount?gid=1&ftaccount=imconfig0001
+http://localhost/guess/detail/byaccount?ftaccount=imconfig0001&pagenum=0&pagecount=10
+http://localhost/guess/get4reward?ftaccount=imconfig0001&pagenum=0&pagecount=10
+curl http://localhost/usersys/login -d '{"ftaccount":"liulaocai168", "passwd":"mypasswd"}'
+curl http://localhost/usersys/loginreg -d '{"ftaccount":"liulaocai168", "passwd":"mypass"}'
+curl http://localhost/usersys/sessionshift
+```
