@@ -477,6 +477,7 @@ curl http://localhost/usersys/partner/del?ftaccount=xxxxx
 
 **http其它接口**
 ``` javascript
+curl "http://localhost/guess/getlist/byopen?pagenum=0&pagecount=10"
 http://localhost/guess/detail/bygidaccount?gid=1&ftaccount=xxxxx
 http://localhost/guess/detail/byaccount?ftaccount=xxxxxx&pagenum=0&pagecount=10
 http://localhost/guess/get4reward?ftaccount=xxxxx&pagenum=0&pagecount=10
