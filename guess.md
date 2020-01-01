@@ -483,4 +483,5 @@ http://localhost/guess/get4reward?ftaccount=xxxxx&pagenum=0&pagecount=10
 curl http://localhost/usersys/login -d '{"ftaccount":"xxxxx", "passwd":"mypasswd"}'
 curl http://localhost/usersys/loginreg -d '{"ftaccount":"xxxxx", "passwd":"mypass"}'
 curl http://localhost/usersys/sessionshift
+curl "http://localhost/guess/addpartner?gid=201&partner=xxxxx"
 ```
